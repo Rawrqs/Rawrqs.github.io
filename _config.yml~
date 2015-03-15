@@ -7,7 +7,7 @@ baseurl: ""
 url: "http://rawrqs.github.io"
 twitter_username: rawrqs
 github_username:  Rawrqs
-linkedin_username:  jakub.winter
+linkedin_username:  jakubwinter
 
 # Build settings
 markdown: redcarpet
