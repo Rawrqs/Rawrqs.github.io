@@ -2,8 +2,8 @@
 layout: post
 title: "My bms functions"
 author: "Jakub Winter"
-date: "Friday, March 01, 2015"
-header-img: "img/post-bg-01.jpg"
+date: "Friday, March 15, 2015"
+header-img: "img/post-bg-02.jpg"
 output: html_output
 highlighter: pygments
 comments: TRUE
