@@ -2,7 +2,7 @@
 layout: post
 title: "Practical Machine Learning PA"
 author: "Jakub Winter aka Rawrqs on GitHub"
-date: "Friday, August 22, 2014"
+date: "Friday, March 01, 2015"
 output: html_document
 header-img: "img/post-bg-01.jpg"
 ---
@@ -19,7 +19,7 @@ For this purpose i have used the random forest technique while using two approac
 The data contains 160 columns and and 19622 rows.Some of the columns and rows were summaries of other rows and columns, thus i have removed those. I found out that it was enough to remove all rows with the new_windows argument set to "no". I have also manually choosen variables of interest (which i searched manually and passed to variable choose) which are presented below. After doing the abovementioned there were no more NA's in data.
 
 
-```r
+```
 data <- read.csv("C:/Users/Kuba/Desktop/pml-training.csv", header=TRUE, sep=",", na.strings= c("NA", ""))
 choose <- c(2, 8:11, 37:49, 60:68, 84:86, 102, 113:124, 140, 151:159, 160)
 #removing all rows that are summaries
