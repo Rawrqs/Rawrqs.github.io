@@ -4,6 +4,7 @@ title: "My bms functions"
 author: "Jakub Winter"
 date: "Friday, March 01, 2015"
 header-img: "img/post-bg-01.jpg"
+output: html_output
 highlighter: pygments
 comments: TRUE
 ---
