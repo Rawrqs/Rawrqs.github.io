@@ -3,8 +3,8 @@ layout: post
 title: "Practical Machine Learning PA"
 author: "Jakub Winter aka Rawrqs on GitHub"
 date: "Friday, March 01, 2015"
-output: html_document
 header-img: "img/post-bg-01.jpg"
+highlight: Github
 ---
 
 ##Summary

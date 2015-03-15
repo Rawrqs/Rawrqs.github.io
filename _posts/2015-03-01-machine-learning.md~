@@ -114,7 +114,7 @@ The plot below presents normalized variable importance for the first apprach. We
 plot(varImp(fit), top = 20)
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](img/unnamed-chunk-5.png) 
 
 ## Confusion Matrix for approach 1
 
