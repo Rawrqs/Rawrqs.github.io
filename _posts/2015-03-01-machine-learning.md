@@ -4,6 +4,7 @@ title: "Practical Machine Learning PA"
 author: "Jakub Winter aka Rawrqs on GitHub"
 date: "Friday, March 01, 2015"
 header-img: "img/post-bg-01.jpg"
+output: html_output
 highlight: Github
 ---
 
@@ -114,7 +115,7 @@ The plot below presents normalized variable importance for the first apprach. We
 plot(varImp(fit), top = 20)
 ```
 
-![plot of chunk unnamed-chunk-5](img/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5]({{ site.baseurl }}/img/unnamed-chunk-5.png) 
 
 ## Confusion Matrix for approach 1
 
