@@ -248,6 +248,24 @@ hr.small {
   margin-top: 60px;
   font-weight: 700;
 }
+section {
+    padding: 100px 0;
+}
+
+section h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+section h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
 .caption {
   text-align: center;
   font-size: 14px;
@@ -369,6 +387,9 @@ hr.small {
 .timeline .timeline-body>p,
 .timeline .timeline-body>ul {
     margin-bottom: 0;
+}
+.text-muted {
+    color: #777;
 }
 footer {
   padding: 50px 0 65px;
