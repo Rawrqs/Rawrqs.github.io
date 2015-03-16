@@ -7,6 +7,7 @@ header-img: "img/post-bg-02.jpg"
 output: html_output
 highlighter: pygments
 comments: TRUE
+tags: [R, data_science]
 ---
 
 #Functions that I created in use with [BMS package](http://bms.zeugner.eu/)
