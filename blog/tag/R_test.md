@@ -1,7 +1,7 @@
 ---
 layout: post
 tag: R
-permalink: R/
+permalink: R2/
 ---
 
 #dasd
