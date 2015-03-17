@@ -8,7 +8,9 @@ layout: null
 		<description>Posts categorized as 'r'</description>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/feed.r.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.tags.r limit:20 %}
+      	{% for post in site.posts limit:20 %}
+  	{% for tag in post.tags %}
+  	{% if tag == "R" %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
@@ -16,6 +18,8 @@ layout: null
         <link>{{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       </item>
-    {% endfor %}
+      	{.% endif %}
+  	{.% endfor %}
+  	{.% endfor %}
 	</channel>
 </rss>
