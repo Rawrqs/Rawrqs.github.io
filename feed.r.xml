@@ -8,7 +8,7 @@ layout: null
 		<description>Posts categorized as 'r'</description>
 		<link>{{ site.url }}</link>
 		<atom:link href="{{ site.url }}/feed.r.xml" rel="self" type="application/rss+xml" />
-    {% for post in site.tags.r limit:20 %}
+    {% for post in post.tags.r limit:20 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
