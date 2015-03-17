@@ -7,6 +7,7 @@ header-img: "img/post-bg-01.jpg"
 output: html_output
 highlighter: pygments
 comments: TRUE
+category: R
 ---
 
 ##Summary
