@@ -3,3 +3,9 @@
 
 - slug: data_science
   name: Data Science
+
+- slug: random_forest
+  name: random forest
+
+- slug: courses
+  name: courses

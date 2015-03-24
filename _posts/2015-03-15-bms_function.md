@@ -10,10 +10,13 @@ comments: TRUE
 tags: [R, data_science]
 ---
 
-#Functions that I created in use with [BMS package](http://bms.zeugner.eu/)
+#Functions for [BMS package](http://bms.zeugner.eu/)
+Using the `BMS` package was really a pleassure for me. Not only is the package really well coded in terms of usability and speed, but also it allows user to use custom functions. While working on my thesis I wanted to obtain the history of the sampling done by the implemented `mcmc` algorithm. This option, however was not available in the package by default. 
 
 ##Newly defined m_priors
+Fortunately, the [author](http://www.zeugner.eu/contact.php), has allowed users to modify the `mprior` function. One time [Zeuger](http://www.zeugner.eu/contact.php) emailed me that it is possible to capture `mdraw` which is the binary reprezentation of covariates for each drawing. By looking up the `mprior` functions that were allready I could easly capture this argument and send it by using `eval` to temporarely creted enviroment called`.tempEnv`. I would like to thank Zygmunt(https://github.com/zzawadz) who suggested me using the `eval` expression. Please find the code below 
 
+###Priors
 ```r
 my_fixed <- function (K, mpparam, ...) {
   if (is.na(mpparam[1]))
@@ -83,7 +86,7 @@ my_uniform <-
   }
 ```
 
-##Wrapper around the BMS::bms for newly defined mpriors
+###Wrapper around the BMS::bms for newly defined mpriors
 
 ```r
 my_bms <- function(X.data, burn = 100, iter = 1000, ...){
@@ -100,7 +103,9 @@ my_bms <- function(X.data, burn = 100, iter = 1000, ...){
 }
 ```
 
-##Function which allows to calculate joint statistic from a list of models
+##Functions which allows to calculate joint statistic and HPD from a list of models
+Taking advantage of this opportunity I present 2 more functions wchich extends functionality of `BMS` package. Both use a `list` of models as an imput. The first one returns `data.frame` with calculated joint statistic for regressors as defined in [Jointness in Bayesian variable selection with applications to growth regression](https://ideas.repec.org/p/wbk/wbrwps/4063.html). The later returns custom range HPD intervals for regressors. In fact they were easy to calculate as the `density` function as well implementes as the whole package.
+
 
 ```r
 getJointLS2 <- function(model, log.it = FALSE) {
@@ -128,8 +133,6 @@ getJointLS2 <- function(model, log.it = FALSE) {
   if (log.it == FALSE)  return(temp_matrix) else return(ln(temp_matrix))
 }
 ```
-
-##Function which allows to calculate HPD's from a list of models
 
 ```r
 getHPD <- function(dd, hpd = 0.95){ # tutaj trzeba dokonczyc funkcje 

@@ -7,8 +7,11 @@ header-img: "img/post-bg-01.jpg"
 output: html_output
 highlighter: pygments
 comments: TRUE
-category: R
+tag: [random_forest, R, courses, data_science]
 ---
+
+##About this post
+This post is a part of homework in a [Practical Machine Learning](https://www.coursera.org/course/predmachlearn). I think that this post is an appropriate way to start my blog. In addition to this I belive that some people may found it helpful. Doing this course I have discovered the package `caret` which is used in the analysis below. Enjoy yourself!
 
 ##Summary
 
@@ -92,12 +95,7 @@ library(e1071)
 fit <- train(classe ~., data = training, method = "rf")
 ```
 
-```
-## Warning: closing unused connection 6 (<-Rawr-PC:11526)
-## Warning: closing unused connection 5 (<-Rawr-PC:11526)
-## Warning: closing unused connection 4 (<-Rawr-PC:11526)
-## Warning: closing unused connection 3 (<-Rawr-PC:11526)
-```
+Please notice the doParallel package which helped me to speed up the analysis
 
 ```r
 fit.adelmo <- train(classe ~., data = subset(training, user_name == "adelmo")[,-1], method = "rf")
@@ -110,7 +108,7 @@ fit.pedro <- train(classe ~., data = subset(training, user_name == "pedro")[,-1]
 
 ## Variable importance
 
-The plot below presents normalized variable importance for the first apprach. We can see that roll_belt was the most important variable while classyfing to the group. We can see that user_name may not be found in the top 20 variables
+The plot below presents normalized variable importance for the first apprach. We can see that roll_belt was the most important variable while classyfing to the group. We can see that user_name may not be found in the top 20 variables. You can read more about `variable importance` on this [site](http://topepo.github.io/caret/varimp.html)
 
 
 ```r
@@ -204,7 +202,7 @@ print(answers)
 Levels: A B C D E
 ```
 ##Anwers for the secound part of assigment
- Below is a code that generates anwers for the secound part of the assignment.
+Below is a code that generates anwers for the secound part of the assignment.
 
 
 ```r
