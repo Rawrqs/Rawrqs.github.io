@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Practical Machine Learning PA"
+title: "Practical Machine Learning with random forest"
 author: "Jakub Winter aka Rawrqs on GitHub"
 date: "Friday, March 01, 2015"
 header-img: "img/post-bg-01.jpg"
