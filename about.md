@@ -1,5 +1,5 @@
-﻿---
-layout: timeline
+---
+layout: post
 title: "About"
 description: "This is what I do."
 header-img: "img/about-bg.jpg"
