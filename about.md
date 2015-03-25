@@ -1,6 +1,6 @@
 ---
 layout: timeline
-title: "a_About"
+title: "About"
 description: "This is what I do."
 header-img: "img/about-bg.jpg"
 highlighter: pygments
