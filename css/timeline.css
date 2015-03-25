@@ -67,7 +67,19 @@
     color: #fff;
     background-color: #{{ site.color.primary }};
 }
-
+.timeline>li .timeline-image-big {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    margin-left: 0;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #{{ site.color.primary }};
+}
 .timeline>li .timeline-image h4 {
     margin-top: 12px;
     font-size: 10px;
