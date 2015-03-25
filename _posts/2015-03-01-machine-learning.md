@@ -11,7 +11,7 @@ tag: [random_forest, R, courses, data_science]
 ---
 
 ##About this post
-This post is a part of homework in a [Practical Machine Learning](https://www.coursera.org/course/predmachlearn). I think that this post is an appropriate way to start my blog. In addition to this I belive that some people may found it helpful. Doing this course I have discovered the package `caret` which is used in the analysis below. Enjoy yourself!
+This post is a part of homework in a [Practical Machine Learning](https://www.coursera.org/course/predmachlearn). I think that this post is an appropriate way to start my blog. In addition to this I believe that some people may found it helpful. Doing this course I have discovered the package `caret` which is used in the analysis below. Enjoy yourself!
 
 ##Summary
 
@@ -22,7 +22,7 @@ For this purpose i have used the random forest technique while using two approac
 ##Cleaning the data
 ###Data selection
 
-The data contains 160 columns and and 19622 rows.Some of the columns and rows were summaries of other rows and columns, thus i have removed those. I found out that it was enough to remove all rows with the new_windows argument set to "no". I have also manually choosen variables of interest (which i searched manually and passed to variable choose) which are presented below. After doing the abovementioned there were no more NA's in data.
+The data contains 160 columns and 19622 rows.Some of the columns and rows were summaries of other rows and columns, thus i have removed those. I found out that it was enough to remove all rows with the new_windows argument set to "no". I have also manually chosen variables of interest (which i searched manually and passed to variable choose) which are presented below. After doing the abovementioned there were no more NA's in data.
 
 
 ```
@@ -56,7 +56,7 @@ colnames(data.3)
 [52] "magnet_forearm_y"     "magnet_forearm_z"     "classe"              
 ```
 
-After doing the abovementioned there were no more NA's in data.
+After doing the abovementioned there were no more `NA`'s in data.
 
 
 ```r
@@ -68,7 +68,7 @@ any(is.na(data.3)==TRUE)
 ```
 
 ##Random forest
-I have choosen to use random forest for my modelling, therefore there was no need for creating part of data for cross validation. I decided to split the data into training and testing set by the ratio of 0.7 training set, and 0.3 test set using default sampling options from the createDataPartition in the caret package. I expect the out of sample error to be rather small, as the rf does not overfitt and has some nice algorith foraveraging the predictors.
+I have chosen to use random forest for my modelling, therefore there was no need for creating part of data for cross validation. I decided to split the data into training and testing set by the ratio of 0.7 training set, and 0.3 test set using default sampling options from the createDataPartition in the caret package. I expect the out of sample error to be rather small, as the rf does not overfit and has some nice algorithm for averaging the predictors.
 
 
 ```r
@@ -82,8 +82,8 @@ testing = data.3[-inTrain,]
 
 I have decided to do two approaches:
 
-* First - to fit a model for every participant with a dependend variable name using all possible information to learn the model
-* Secound - to fit a model for every participant separately, which would catch thier specific characteristics of human body 
+* First - to fit a model for every participant with a dependent variable name using all possible information to learn the model
+* Secound - to fit a model for every participant separately, which would catch their specific characteristics of human body 
 
 Later on I will use the only First model, but I will also shortly compare results from both approaches. 
 
@@ -108,7 +108,7 @@ fit.pedro <- train(classe ~., data = subset(training, user_name == "pedro")[,-1]
 
 ## Variable importance
 
-The plot below presents normalized variable importance for the first apprach. We can see that roll_belt was the most important variable while classyfing to the group. We can see that user_name may not be found in the top 20 variables. You can read more about `variable importance` on this [site](http://topepo.github.io/caret/varimp.html)
+The plot below presents normalized variable importance for the first apprach. We can see that roll_belt was the most important variable while classifing to the group. We can see that user_name may not be found in the top 20 variables. You can read more about `variable importance` on this [site](http://topepo.github.io/caret/varimp.html)
 
 
 ```r
@@ -158,8 +158,8 @@ Detection Prevalence    0.285    0.193    0.174    0.165    0.183
 Balanced Accuracy       0.999    0.996    0.994    0.996    0.997
 ```
 
-The accuracy is pretty satisfiying which is 0.9946. We can also see that most incorrectly classified cases were of type D.
-Let's now compare this accuracy to the accuracy of secound approach.
+The accuracy is pretty satisfying which is 0.9946. We can also see that most incorrectly classified cases were of type D.
+Let's now compare this accuracy to the accuracy of second approach.
 
 
 
@@ -187,7 +187,7 @@ After calculating accuracy statistic and weighting it by the number of testing c
 
 ##Predicting the testing data set from Coursera
 
-The secound part of assignment assumes predicting  set of 20 observations. The predictions from my first model are as follows:
+The second part of assignment assumes predicting  set of 20 observations. The predictions from my first model are as follows:
 
 
 ```r
@@ -201,8 +201,8 @@ print(answers)
  [1] B A B A A E D B A A B C B A E E A B B B
 Levels: A B C D E
 ```
-##Anwers for the secound part of assigment
-Below is a code that generates anwers for the secound part of the assignment.
+##Anwers for the second part of assignment
+Below is a code that generates answers for the second part of the assignment.
 
 
 ```r
